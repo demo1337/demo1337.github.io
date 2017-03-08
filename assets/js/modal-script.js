@@ -1,9 +1,6 @@
-//demo 01
-$("#demo01").animatedModal();
-
 //demo 02
 $("#demo02").animatedModal({
-    modalTarget:'modal-02',
+    modalTarget:'popup',
     animatedIn:'lightSpeedIn',
     animatedOut:'bounceOutDown',
     color:'#3498db',
