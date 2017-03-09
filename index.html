@@ -7,10 +7,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!-- modal CSS -->
         <link rel="stylesheet" href="vendors/modal/css/normalize.min.css">
 		<link rel="stylesheet" href="vendors/modal/css/animate.min.css">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+		<link rel="stylesheet" href="vendors/remodal/remodal.css">
+		<link rel="stylesheet" href="vendors/remodal/remodal-default-theme.css">
+		<style>
+			.remodal-bg.with-red-theme.remodal-is-opening,
+			.remodal-bg.with-red-theme.remodal-is-opened {
+			filter: none;
+			}
+
+			.remodal-overlay.with-red-theme {
+			background-color: #f44336;
+			}
+
+			.remodal.with-red-theme {
+			background: #fff;
+			}
+		</style>
 		<style>
 			#btn-close-modal {
 				width:100%;
@@ -21,604 +41,369 @@
 		</style>
 	</head>
 	<body id="top">
+			<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<div>
 
+				<div class="descForAdd">Mitigating Controls</div>
+				<br />
+				<div>Vulnerability Management</div>
+					<div class="select-wrapper">
+						<select class="miti_ratings select_unblock" id="mtt1">
+							<option value="0">N/A</option>
+							<option value="3">Low</option>
+							<option value="6">High</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<div>Identity Management</div>
+					<div class="select-wrapper">
+						<select class="miti_ratings select_unblock" id="mtt2">
+							<option value="0">N/A</option>
+							<option value="3">Low</option>
+							<option value="6">High</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<div>Data Security</div>
+					<div class="select-wrapper">
+						<select class="miti_ratings select_unblock" id="mtt3">
+							<option value="0">N/A</option>
+							<option value="3">Low</option>
+							<option value="6">High</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<div>Cyber Defence</div>
+					<div class="select-wrapper">
+						<select class="miti_ratings select_unblock" id="mtt4">
+							<option value="0">N/A</option>
+							<option value="3">Low</option>
+							<option value="6">High</option>
+						</select>
+					</div>
+				</div>
+				<div>
+				<div>Security Operations</div>
+					<div class="select-wrapper">
+						<select class="miti_ratings select_unblock" id="mtt5">
+							<option value="0">N/A</option>
+							<option value="3">Low</option>
+							<option value="6">High</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+				<button data-remodal-action="confirm" id="submit_miti" class="remodal-confirm">Submit</button>
+			</div>
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1>Risk Register WebApp Demo <br />
-					</h1>
+					<h1>Risk Register WebApp Demo</h1><br />
 				</div>
+				<div class="inner top_box">
+					<div class="float_left_icon">
+						<div class="sidebar-icon vrX" id="vr1"><h1>Total Risks:<div id="value_risk1">7</div></h1></div>
+						<div class="sidebar-icon vrX" id="vr2"><h1>Critical Risks:<div id="value_risk2">3</div></h1></div>
+						<div class="sidebar-icon vrX" id="vr3"><h1>High Risks:<div id="value_risk3">2</div></h1></div>
+						<div class="sidebar-icon vrX" id="vr3"><h1>Low Risks:<div id="value_risk4">3</div></h1></div>
+					</div>
+				</div>
+				<br />
+				<div class="inner top_box button_miti">
+					<div class="float_left_icon">
+						<a href="#modal"><input type="button" id="miti_control" value="Mitigating Controls"></input></a>
+					</div>
+				</div>
+
 			</header>
 
 		<!-- Main -->
 			<div id="main">
 				<!-- One -->
 					<section id="one">
-						<header class="major">
-							<h2>Risk Registry Site</h2>
-						</header>
+						<div id="titleForRisk"><strong>Risk Registry Site</strong></div>
+						<br />
 						<p>To keep a log of security risk and determine them by priority.</p>
-						<h3><a href="#output_table"> Go to Output </a></h3>
-					<!-- 	<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
+						<br />
+						<div class="descForAdd"><strong></strong></div>
+						<ul class="collapsible popout" data-collapsible="accordion">
+							<li>
+								<div class="collapsible-header" id="addthenew"><i class="material-icons">add circle</i>Add Risk</div>
+								<div class="collapsible-body">
+									<section id="fillout">
+										<form method="post">
+										<div class="row uniform 50% centerFill">
+											
+											<div class="6u 12u$(xsmall)">
+											<div class="titleoflists"><strong>Risk</strong></div>
+												<input type="text" name="demo-name" id="input_risk" value="" placeholder="Name" />
+												<input type="text" name="demo-name-dsec" id="input_risk_desc" value="" placeholder="Description" />
+											</div>
+											<br></br><br></br><br></br>
+											
+											<div class="6u 12u$(xsmall)">
+											<div class="titleoflists"><strong>Business Impact</strong></div>
+											<br></br>
+											<p>Potential for Revenue Loss?</p>
+												<div class="select-wrapper">
+													<select name="demo-category" class="select_unblock" id="att1">
+														<option value="0">N/A</option>
+														<option value="3">Low (Under $20k)</option>
+														<option value="6">Med ($20k - $100k)</option>
+														<option value="10">High ($100k+)</option>
+													</select>
+													<br />
+												</div>
+											<p> Potential for Brand/Reputational Damage?</p>
+												<div class="select-wrapper">
+													<select name="demo-category" class="select_unblock" id="att2">
+														<option value="0">N/A</option>
+														<option value="3">Low</option>
+														<option value="6">Med</option>
+														<option value="10">High</option>
+													</select>
+													<br />
+												</div>
+											<p>Is it a Regulatory Compliance Requirement</p>
+												<div class="select-wrapper">
+													<select name="demo-category" class="select_unblock" id="att3">
+														<option value="10">Yes</option>
+														<option value="0">No</option>
+													</select>
+													<br />
+												</div>
+											<p>Containing Privacy Implications?</p>
+												<div class="select-wrapper">
+													<select name="demo-category" class="select_unblock" id="att4">
+														<option value="0">N/A</option>
+														<option value="3">Low</option>
+														<option value="6">Med</option>
+														<option value="10">High</option>
+													</select>
+													<br />
+												</div>
+											<p>Risk of Denial of Services?</p>
+												<div class="select-wrapper">
+													<select name="demo-category" class="select_unblock" id="att5">
+														<option value="0">N/A</option>
+														<option value="3">Low ( < 10%)</option>
+														<option value="6">Med (10% ~ 25%)</option>
+														<option value="10">High ( > 25%)</option>
+													</select>
+													<br />
+												</div>
+											</div>
+											<p></p>	
+										</div>
+										<p></p>
+										<p></p>
+										<br></br>
+											<div class="12u$">
+												<ul class="actions">
+													<li><input type="button" value="Submit" class="special" id="submit_now" /></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+											</div>
+										</form>
+									</section>
+								</div>
+							</li>
+						</ul>	
 					</section>
-
-					<section id="fillout">
-						<form method="post">
-						<div class="row uniform 50%">
-							
-							<div class="6u 12u$(xsmall)">
-							<h2>Risk</h2>
-								<input type="text" name="demo-name" id="input_risk" value="" placeholder="Name" />
-								<input type="checkbox" id="check1" name="check1">
-							</div>
-							<br></br><br></br>
-							<h2><strong>Operations</strong></h2>
-							<br></br>
-							<div class="6u 12u$(xsmall)">
-							<p>International Operations</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att1">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Supply chain</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att2">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Data Management</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att3">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Customer Relationships</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att4">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Regularity Complexity & Uncertainty</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att5">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Operational Infrastructure</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att6">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>		
-							<p></p>	
-						</div>
-						<p></p>
-						<p></p>
-						<div class="row uniform 50%">
-							<p></p>
-							<h2><strong>Financial</strong></h2>
-							<br></br>
-							<div class="6u 12u$(xsmall)">
-							<p>Interest Rate Changes</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att7">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Tax Strategy & Optimization</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att8">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>	
-							<div class="6u 12u$(xsmall)">
-							<p>Currency Fluctuations</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att9">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Credit & Collections</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att10">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>	
-							<p></p>	
-						</div>
-						<p></p>
-						<p></p>
-						<div class="row uniform 50%">
-							<p></p>
-							<h2><strong>Technical</strong></h2>
-							<br></br>
-							<div class="6u 12u$(xsmall)">
-							<p>Spoofing of Identity</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att11">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Tempering with Data</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att12">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Repudiation of Transactions</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att13">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>	
-							<div class="6u 12u$(xsmall)">
-							<p>Information Disclosure</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att14">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Denial of Sevice</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att15">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<div class="6u 12u$(xsmall)">
-							<p>Elevation of Privilege</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att16">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-							<p></p>	
-						</div>
-						<div class="row uniform 50%">
-							<p></p>
-							<h2><strong>Physical</strong></h2>
-							<br></br>
-							<div class="6u 12u$(xsmall)">
-								<p>Physical Harm</p>
-								<div class="select-wrapper">
-									<select name="demo-category" id="att17">
-										<option value="1">Low</option>
-										<option value="2">Med</option>
-										<option value="3">High</option>
-									</select>
-									<br />
-									<!--<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy of this message</label>-->
-								</div>
-							</div>
-						</div>
-						<br></br>
-							<div class="12u$">
-								<ul class="actions">
-									<li><input type="button" value="Submit" class="special" id="submit_now" /></li>
-									<li><input type="reset" value="Reset" /></li>
-								</ul>
-							</div>
-						</form>
-					</section>
+					
 					<section>
-					<h4>Output</h4>
-						<h5>Risk Register</h5>
-						<div class="table-wrapper">
-						<table>
-						<thead>
-							<tr>
-								<th><strong>Risk Priority</strong></th>
-								<th><strong>Risk</strong></th>
-								<td>International Operations</td>
-								<td>Supply Chain</td>
-								<td>Data Mangement</td>
-								<td>Customer Relationships</td>
-								<td>Regulary Complexity & Unertainty</td>
-								<td>Operational Infrastructure</td>
-								<td>Interest Rate Changes</td>
-								<td>Tax Strategy & Optimization</td>
-								<td>Currency Fluctuations</td>
-								<td>Credit & Collections</td>
-								<td>Spoofing of Identity</td>
-								<td>Tampering with Data</td>
-								<td>Repudiation of Transactions</td>
-								<td>Information Disclosure</td>
-								<td>Denial of Sevice</td>
-								<td>Elevation of Privilege</td>
-								<td>Risk Total</td>
-							</tr>
-						</thead>
-						<tbody id="output_table">
-							<tr>
-								<td>Medium</td>
-								<th><strong><a id="demo02" href="#modal-02">DMCA</a></strong></th>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-							</tr>
-							<tr>
-
-								<td>Low</td>
-								<th>PCI Compliance</th>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-							</tr>
-							<tr>
-
-								<td>High</td>
-								<th>NERC Compliance</th>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-							</tr>
-						</tbody>
-						</table>
+						<div id="titleForOutput">
+							<h4>Output</h4>
+							<h5>Risk Register</h5>
+						</div>
+						<ul class="collapsible popout" id="listofdawgs" data-collapsible="accordion">
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Patching<div class="score">13</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>DMCA<div class="score">20</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>PCI Compliance<div class="score">10</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Servers<div class="score">26</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>In windows 200 servers exist in the environment (unsupported since 2000)</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>DLP<div class="score">24</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>DLP solution is end of life and no longer supported by the vendor</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Rogue Access<div class="score">26</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Rogue access points within the environment without detection</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Guest Wireless<div class="score">8</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Guest qireless passcode has not been changed in over 5 years</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Public Facing Assets<div class="score">13</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Public facing websites with single factor authentication</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add circle outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove circle outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<input type="button" id="btn4table" value="sort"></input>
 						</div>
 					</section>
 			</div>
-
-        <div id="modal-02">
-            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
-            <div  id="btn-close-modal" class="close-modal-02"> 
-                CLICK HERE TO
-            </div>
-            <div class="modal-content" >
-            	<section>
-					<div class="row uniform 50%">
-<<<<<<< HEAD
-						<div id="hide_div">
-							<h4>Output</h4>
-							<h5>Risk Register</h5>
-							<div class="table-wrapper">
-								<table>
-								<thead>
-									<tr>
-										<th><strong>Risk Priority</strong></th>
-										<th><strong>Risk</strong></th>
-										<td>International Operations</td>
-										<td>Supply Chain</td>
-										<td>Data Mangement</td>
-										<td>Customer Relationships</td>
-										<td>Regulary Complexity & Unertainty</td>
-										<td>Operational Infrastructure</td>
-										<td>Interest Rate Changes</td>
-										<td>Tax Strategy & Optimization</td>
-										<td>Currency Fluctuations</td>
-										<td>Credit & Collections</td>
-										<td>Spoofing of Identity</td>
-										<td>Tampering with Data</td>
-										<td>Repudiation of Transactions</td>
-										<td>Information Disclosure</td>
-										<td>Denial of Sevice</td>
-										<td>Elevation of Privilege</td>
-										<td>Risk Total</td>
-									</tr>
-								</thead>
-								<tbody id="output_table">
-									<tr>
-										<td>Medium</td>
-										<th><strong><a id="demo02" href="#modal-02">DMCA</a></strong></th>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-									</tr>
-									<tr>
-
-										<td>Low</td>
-										<th>PCI Compliance</th>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-									</tr>
-									<tr>
-
-										<td>High</td>
-										<th>NERC Compliance</th>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-										<td>aaa</td>
-									</tr>
-								</tbody>
-								</table>
-							</div>
-=======
-					<h4>Output</h4>
-						<h5>Risk Register</h5>
-						<div class="table-wrapper">
-						<table>
-						<thead>
-							<tr>
-								<th><strong>Risk Priority</strong></th>
-								<th><strong>Risk</strong></th>
-								<td>International Operations</td>
-								<td>Supply Chain</td>
-								<td>Data Mangement</td>
-								<td>Customer Relationships</td>
-								<td>Regulary Complexity & Unertainty</td>
-								<td>Operational Infrastructure</td>
-								<td>Interest Rate Changes</td>
-								<td>Tax Strategy & Optimization</td>
-								<td>Currency Fluctuations</td>
-								<td>Credit & Collections</td>
-								<td>Spoofing of Identity</td>
-								<td>Tampering with Data</td>
-								<td>Repudiation of Transactions</td>
-								<td>Information Disclosure</td>
-								<td>Denial of Sevice</td>
-								<td>Elevation of Privilege</td>
-								<td>Risk Total</td>
-							</tr>
-						</thead>
-						<tbody id="output_table">
-							<tr>
-								<td>Medium</td>
-								<th><strong><a id="demo02" href="#modal-02">DMCA</a></strong></th>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-							</tr>
-							<tr>
-
-								<td>Low</td>
-								<th>PCI Compliance</th>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-							</tr>
-							<tr>
-
-								<td>High</td>
-								<th>NERC Compliance</th>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-								<td>aaa</td>
-							</tr>
-						</tbody>
-						</table>
->>>>>>> bbbf4945d31dfcb3a30c82c9179c2894f8a489d4
-						</div>
-					<div class="6u 12u$(xsmall)">
-            	</section>
-            </div>
-        </div>
-
 			<div>
 			</div>
 		<!-- Scripts -->
@@ -631,5 +416,41 @@
 			<script src="vendors/modal/js/animatedModal.min.js"></script>
 			<script src="assets/js/script.js"></script>
 			<script src="assets/js/modal-script.js"></script>
+			<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+			<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+			<script src="assets/js/sort.js"></script></script>
+			<script src="vendors/remodal/remodal.js"></script>
+
+			<!-- Events -->
+			<script>
+			$(document).on('opening', '.remodal', function () {
+			console.log('opening');
+			});
+
+			$(document).on('opened', '.remodal', function () {
+			console.log('opened');
+			});
+
+			$(document).on('closing', '.remodal', function (e) {
+			console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+			});
+
+			$(document).on('closed', '.remodal', function (e) {
+			console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+			});
+
+			$(document).on('confirmation', '.remodal', function () {
+			console.log('confirmation');
+			});
+
+			$(document).on('cancellation', '.remodal', function () {
+			console.log('cancellation');
+			});
+
+			//  The second way to initialize:
+			$('[data-remodal-id=modal2]').remodal({
+			modifier: 'with-red-theme'
+			});
+			</script>
 	</body>
 </html>

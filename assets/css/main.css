@@ -2110,7 +2110,7 @@
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			padding-left: 0.0em;
 		}
 
 		ul.alt {
@@ -2578,8 +2578,8 @@
 
 		#main > section {
 			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			margin: 4em 0 0 0;/*
+			padding: 4em 0 0 0;*/
 		}
 
 			#main > section:first-child {
