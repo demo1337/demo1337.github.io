@@ -50,9 +50,9 @@
 				<div>Vulnerability Management</div>
 					<div class="select-wrapper">
 						<select class="miti_ratings select_unblock" id="mtt1">
-							<option value="0">N/A</option>
+							<option value="0" selected="selected">N/A</option>
 							<option value="3">Low</option>
-							<option value="6">High</option>
+							<option value="6" >High</option>
 						</select>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 					<div class="select-wrapper">
 						<select class="miti_ratings select_unblock" id="mtt2">
 							<option value="0">N/A</option>
-							<option value="3">Low</option>
+							<option value="3" selected="selected">Low</option>
 							<option value="6">High</option>
 						</select>
 					</div>
@@ -72,7 +72,7 @@
 						<select class="miti_ratings select_unblock" id="mtt3">
 							<option value="0">N/A</option>
 							<option value="3">Low</option>
-							<option value="6">High</option>
+							<option value="6" selected="selected">High</option>
 						</select>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 					<div class="select-wrapper">
 						<select class="miti_ratings select_unblock" id="mtt4">
 							<option value="0">N/A</option>
-							<option value="3">Low</option>
+							<option value="3" selected="selected">Low</option>
 							<option value="6">High</option>
 						</select>
 					</div>
@@ -92,7 +92,7 @@
 						<select class="miti_ratings select_unblock" id="mtt5">
 							<option value="0">N/A</option>
 							<option value="3">Low</option>
-							<option value="6">High</option>
+							<option value="6" selected="selected">High</option>
 						</select>
 					</div>
 				</div>
@@ -222,73 +222,11 @@
 							<h4>Output</h4>
 							<h5>Risk Register</h5>
 						</div>
+						<div id="labelsforlist">
+							<div id="lfl1">Risk</div>
+							<div id="lfl2">Score</div>
+						</div><br />
 						<ul class="collapsible popout" id="listofdawgs" data-collapsible="accordion">
-							<li>
-								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Patching<div class="score">13</div></div>
-								<div class="collapsible-body  inside_info">
-									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
-									</ul>
-									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
-									</ul>
-									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header"><i class="material-icons">fingerprint</i>DMCA<div class="score">20</div></div>
-								<div class="collapsible-body  inside_info">
-									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
-									</ul>
-									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
-									</ul>
-									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header"><i class="material-icons">fingerprint</i>PCI Compliance<div class="score">10</div></div>
-								<div class="collapsible-body  inside_info">
-									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
-									</ul>
-									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
-									</ul>
-									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
-									</ul>
-								</div>
-							</li>
 							<li>
 								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Servers<div class="score">26</div></div>
 								<div class="collapsible-body  inside_info">
@@ -309,29 +247,7 @@
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
 									</ul>
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header"><i class="material-icons">fingerprint</i>DLP<div class="score">24</div></div>
-								<div class="collapsible-body  inside_info">
-									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">info</i>DLP solution is end of life and no longer supported by the vendor</div></li>
-									</ul>
-									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
-									</ul>
-									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
-										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
-									</ul>
-								</div>
+								</div>  <!--26-->
 							</li>
 							<li>
 								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Rogue Access<div class="score">26</div></div>
@@ -353,13 +269,13 @@
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
 									</ul>
-								</div>
+								</div> <!--26-->
 							</li>
 							<li>
-								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Guest Wireless<div class="score">8</div></div>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>DLP<div class="score">24</div></div>
 								<div class="collapsible-body  inside_info">
 									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
-										<li><div class="collapsible-header"><i class="material-icons">info</i>Guest qireless passcode has not been changed in over 5 years</div></li>
+										<li><div class="collapsible-header"><i class="material-icons">info</i>DLP solution is end of life and no longer supported by the vendor</div></li>
 									</ul>
 									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
 										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
@@ -375,7 +291,51 @@
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
 									</ul>
-								</div>
+								</div> <!--24-->
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>DMCA<div class="score">20</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div> <!--20--> <!--20-->
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Patching<div class="score">13</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div> <!--13-->
 							</li>
 							<li>
 								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Public Facing Assets<div class="score">13</div></div>
@@ -397,10 +357,54 @@
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
 										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
 									</ul>
-								</div>
+								</div> <!--13-->
 							</li>
-						</ul>
-						<input type="button" id="btn4table" value="sort"></input>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>PCI Compliance<div class="score">10</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Not performing routine patching on windows environment</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div> <!--10-->
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">fingerprint</i>Guest Wireless<div class="score">8</div></div>
+								<div class="collapsible-body  inside_info">
+									<ul class="collapsible" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">info</i>Guest qireless passcode has not been changed in over 5 years</div></li>
+									</ul>
+									<ul class="collapsible data_body" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Revenue Loss</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Retentional/Damage</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>10 <div class="data-score">Compliance Requirement</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>6 <div class="data-score">Privacy Implications</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">add_circle_outline</i>3 <div class="data-score">Denial of Service</div></div></li>
+									</ul>
+									<ul class="collapsible data_body_minus" id="listofdawgs" data-collapsible="accordion">
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti">0</div><div class="data-score">Vulnerability Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti1">3 </div><div class="data-score">Identity Management</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti2">6 </div><div class="data-score">Data Security</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti3">3 </div><div class="data-score">Cyber Defence</div></div></li>
+										<li><div class="collapsible-header"><i class="material-icons">remove_circle_outline</i><div class="newmiti4">6 </div><div class="data-score">Security Operations</div></div></li>
+									</ul>
+								</div> <!--8-->
+							</li>
+						</ul><!-- 
+						<input type="button" id="btn4table" value="sort"></input> -->
 						</div>
 					</section>
 			</div>

@@ -9,6 +9,18 @@
 	float: left
 }*/
 
+#lfl1{
+	float: left;
+}
+
+#lfl2{
+	float: right;
+}
+
+#labelsforlist{
+	padding: 0px 30px 0px 30px;
+}
+
 .vrX{
 	background-color: brown;
 	font-size: .8em !important;
